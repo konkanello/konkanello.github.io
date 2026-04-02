@@ -28,6 +28,16 @@ h4 {
   font-weight: 100;
   line-height: 25px;
   text-transform: none; }
+.award-badge {
+  display: inline-block;
+  background: #f0ad4e;
+  color: #fff;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-left: 6px;
+  vertical-align: middle; }
 .section-header {
   text-transform: uppercase;
   font-size: 1.5rem;
@@ -75,6 +85,57 @@ h4 {
 @media (min-width: 550px) {
   .header {
     margin-top: 5rem; }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #1a1a2e;
+    color: #e0e0e0; }
+  a {
+    color: #64b5f6; }
+  a:hover {
+    color: #90caf9; }
+  .navbar,
+  .navbar-spacer {
+    background: #1a1a2e;
+    border-color: #333; }
+  .navbar-link {
+    color: #e0e0e0; }
+  .navbar-link.active {
+    color: #64b5f6; }
+  .docs-section {
+    border-top-color: #333; }
+  .footer {
+    color: rgba(255, 255, 255, 0.5);
+    border-top-color: #333; }
+  .paper .button {
+    color: #64b5f6;
+    border-color: #64b5f6; }
+  .paper .button:hover {
+    background: #64b5f6;
+    color: #1a1a2e; }
+  .award-badge {
+    background: #e6a817; }
+  .popover {
+    background: #2a2a3e;
+    border-color: #444; }
+  .popover-link {
+    color: #e0e0e0;
+    border-bottom-color: #444; }
+  .popover-link:hover {
+    background: #64b5f6;
+    color: #1a1a2e; }
+  .tab-nav .button {
+    color: #e0e0e0;
+    border-color: #555; }
+  .tab-nav .button.active {
+    color: #64b5f6;
+    border-color: #64b5f6; }
+  .project-image-container {
+    border-color: rgba(255, 255, 255, 0.2); }
+  .timeline .flag {
+    background: #2a2a3e; }
 }
 
 /* Larger than tablet */
