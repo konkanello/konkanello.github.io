@@ -6,15 +6,59 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Konstantinos Kanellopoulos | Home</title>
-  <meta name="description" content="Konstantinos Kanellopoulos">
+  <meta name="description" content="PhD Student at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems.">
   <meta name="author" content="Konstantinos Kanellopoulos">
+  <meta name="theme-color" content="#1f5132">
+
+  <!-- Open Graph -->
   <meta property="og:title" content="Konstantinos Kanellopoulos" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://konkanello.github.io" />
   <meta property="og:site_name" content="Konstantinos Kanellopoulos" />
   <meta property="og:description" content="PhD Student at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems." />
   <meta property="og:image" content="https://konkanello.github.io/assets/profile-pics/cv_pic.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="1200" />
+  <meta property="og:image:alt" content="Konstantinos Kanellopoulos" />
+
+  <!-- Twitter card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@konkanello" />
+  <meta name="twitter:creator" content="@konkanello" />
+  <meta name="twitter:title" content="Konstantinos Kanellopoulos" />
+  <meta name="twitter:description" content="PhD Student at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems." />
+  <meta name="twitter:image" content="https://konkanello.github.io/assets/profile-pics/cv_pic.png" />
+
   <link rel="canonical" href="https://konkanello.github.io" />
+
+  <!-- JSON-LD Person schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Konstantinos Kanellopoulos",
+    "url": "https://konkanello.github.io",
+    "image": "https://konkanello.github.io/assets/profile-pics/cv_pic.png",
+    "email": "konkanello@gmail.com",
+    "jobTitle": "PhD Student",
+    "affiliation": {
+      "@type": "Organization",
+      "name": "ETH Zurich — SAFARI Research Group",
+      "url": "https://safari.ethz.ch"
+    },
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "National Technical University of Athens"
+    },
+    "sameAs": [
+      "https://x.com/konkanello",
+      "https://www.linkedin.com/in/konkanello/",
+      "https://github.com/konkanello",
+      "https://scholar.google.com/citations?user=6QgXle8AAAAJ&hl=en",
+      "https://dblp.org/pid/250/8887.html"
+    ]
+  }
+  </script>
 
   <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -22,17 +66,15 @@
 
   <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/libs/external/skeleton/normalize.css">
   <link rel="stylesheet" href="/libs/external/skeleton/skeleton.css">
   <link rel="stylesheet" href="/libs/custom/my_css.css">
-
-  <!-- JQuery
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <script src="/libs/external/jquery-3.1.1.min.js"></script>
 
   <!-- Font-Awesome
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -42,19 +84,12 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/libs/external/academicons-1.8.6/css/academicons.min.css">
 
-  <!-- Skeleton tabs
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- Skeleton tabs (CSS only — JS replaced by inline vanilla handler) -->
   <link rel="stylesheet" href="/libs/external/skeleton_tabs/skeleton-tabs.css">
-  <script src="/libs/external/skeleton_tabs/skeleton-tabs.js"></script>
 
   <!-- Timeline
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="/libs/external/timeline.css">
-
-  <!-- Scripts
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <!--<link rel="stylesheet" href=/libs/external/github-prettify-theme.css>-->
-  <script src="/libs/custom/my_js.js"></script>
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -71,32 +106,36 @@
     <section class="header">
       <div class="row">
         <div class="three columns">
-          <a href="/"><img class="u-max-full-width" src="/assets/profile-pics/cv_pic.png"></a>
+          <a href="/"><img class="u-max-full-width" src="/assets/profile-pics/cv_pic.png"
+                           alt="Konstantinos Kanellopoulos" decoding="async"></a>
         </div>
         <div class="nine columns main-description">
             <h1>Konstantinos Kanellopoulos</h1>
-            <p>PhD Student with Onur Mutlu @ SAFARI Research Group - ETH Zurich</p>
+            <p>PhD Student @ SAFARI Research Group - ETH Zurich</p>
             <p>konkanello [AT] gmail.com</p>
-            <p>
-              <span onclick="window.open('https://x.com/konkanello')" style="cursor: pointer">
-                <i class="fa fa-twitter" aria-hidden="true"></i>
-              </span>
+            <p class="hero-tag">Currently working on <span>system design for Physical AI</span> &amp; <span>memory management</span>.</p>
+            <p class="hero-socials">
+              <a href="https://x.com/konkanello" target="_blank" rel="noopener" aria-label="X / Twitter">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+                  <path d="M18.244 2H21l-6.52 7.45L22 22h-6.84l-4.78-6.24L4.8 22H2.04l6.97-7.96L2 2h7l4.32 5.71L18.244 2Zm-1.2 18h1.49L7.04 4H5.45l11.594 16Z"/>
+                </svg>
+              </a>
 
-              <span onclick="window.open('https://www.linkedin.com/in/konkanello/')" style="cursor: pointer">
+              <a href="https://www.linkedin.com/in/konkanello/" target="_blank" rel="noopener" aria-label="LinkedIn">
                 <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('https://github.com/konkanello')" style="cursor: pointer">
+              <a href="https://github.com/konkanello" target="_blank" rel="noopener" aria-label="GitHub">
                 <i class="fa fa-github" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('https://scholar.google.com/citations?user=6QgXle8AAAAJ&hl=en')" style="cursor: pointer">
+              <a href="https://scholar.google.com/citations?user=6QgXle8AAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
                 <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
-              </span>
+              </a>
 
-              <span onclick="window.open('https://dblp.org/pid/250/8887.html')" style="cursor: pointer; font-size: 1.2rem; margin-left: 0.35rem; vertical-align: middle;">
+              <a href="https://dblp.org/pid/250/8887.html" target="_blank" rel="noopener" aria-label="DBLP" class="dblp-pill">
                 DBLP
-              </span>
+              </a>
             </p>
         </div>
       </div>
@@ -184,19 +223,6 @@ My research lies at the intersection of hardware, software, and operating system
             
               <a class="button" href="https://arxiv.org/abs/2508.02007" target="_blank">Paper</a>
             
-
-            
-
-            
-
-            
-
-            
-              <a class="button" href="https://dblp.org/rec/journals/corr/abs-2508-02007.html" target="_blank">DBLP</a>
-
-
-
-
           </div>
         </div>
 
@@ -523,19 +549,6 @@ My research lies at the intersection of hardware, software, and operating system
             
               <a class="button" href="https://arxiv.org/abs/2601.17615" target="_blank">Paper</a>
             
-
-            
-
-            
-
-            
-
-            
-              <a class="button" href="https://dblp.org/rec/journals/corr/abs-2601-17615.html" target="_blank">DBLP</a>
-            
-
-            
-
           </div>
         </div>
       
@@ -546,19 +559,6 @@ My research lies at the intersection of hardware, software, and operating system
            <div class="paper-buttons">
 
               <a class="button" href="https://arxiv.org/abs/2508.02007" target="_blank">Paper</a>
-
-
-
-
-
-
-
-
-
-              <a class="button" href="https://dblp.org/rec/journals/corr/abs-2508-02007.html" target="_blank">DBLP</a>
-
-
-
 
           </div>
         </div>
@@ -1225,20 +1225,25 @@ My research lies at the intersection of hardware, software, and operating system
         <div class="four columns">
           konkanello [AT] gmail.com
         </div>
-        <div class="four columns">
-          <span onclick="window.open('https://x.com/konkanello')" style="cursor: pointer">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-          </span>
-          <span onclick="window.open('https://www.linkedin.com/in/konkanello/')" style="cursor: pointer">
+        <div class="four columns footer-socials">
+          <a href="https://x.com/konkanello" target="_blank" rel="noopener" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" focusable="false">
+              <path d="M18.244 2H21l-6.52 7.45L22 22h-6.84l-4.78-6.24L4.8 22H2.04l6.97-7.96L2 2h7l4.32 5.71L18.244 2Zm-1.2 18h1.49L7.04 4H5.45l11.594 16Z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/konkanello/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-          </span>
-          <span onclick="window.open('https://github.com/konkanello')" style="cursor: pointer">
+          </a>
+          <a href="https://github.com/konkanello" target="_blank" rel="noopener" aria-label="GitHub">
             <i class="fa fa-github" aria-hidden="true"></i>
-          </span>
-          <span onclick="window.open('https://scholar.google.com/citations?user=6QgXle8AAAAJ&hl=en')" style="cursor: pointer">
+          </a>
+          <a href="https://scholar.google.com/citations?user=6QgXle8AAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
             <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
-          </span>
+          </a>
         </div>
+      </div>
+      <div class="row footer-meta">
+        <span>Last updated <time id="last-updated"></time></span>
       </div>
     </div>
 
@@ -1257,6 +1262,221 @@ My research lies at the intersection of hardware, software, and operating system
 
   <!-- do not remove -->
   <span id="62cd7b7da1aff3196fdc26b60e396df9"></span>
+
+  <!-- Aesthetic entrance animations (anime.js v4) -->
+  <script>document.body.classList.add('js');</script>
+  <script>
+    /* ---- Tab toggle (replaces skeleton-tabs.js + jQuery) ---- */
+    document.querySelectorAll('.tab-nav .button[data-ref]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const ref = btn.getAttribute('data-ref');
+        const target = document.querySelector(ref);
+        if (!target) return;
+        const navList = btn.closest('ul.tab-nav');
+        const paneParent = target.parentElement;
+        navList.querySelectorAll('.button.active').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        paneParent.querySelectorAll('.tab-pane.active').forEach(p => p.classList.remove('active'));
+        target.classList.add('active');
+      });
+    });
+
+    /* ---- Highlight Konstantinos's name in author lists ---- */
+    document.querySelectorAll('.paper p:not(.title) b').forEach(b => {
+      const t = b.textContent.trim();
+      if (/Konstantinos\s+Kanellopoulos/i.test(t)) {
+        b.classList.add('me');
+      }
+    });
+
+    /* ---- Move award badge into paper-buttons row + apply tier variant ---- */
+    document.querySelectorAll('.paper .title .award-badge').forEach(badge => {
+      const paper = badge.closest('.paper');
+      const buttons = paper && paper.querySelector('.paper-buttons');
+      if (buttons) buttons.appendChild(badge);
+      const t = badge.textContent.toLowerCase();
+      if (t.includes('best paper')) badge.classList.add('badge-best');
+      else if (t.includes('distinguished')) badge.classList.add('badge-distinguished');
+      else badge.classList.add('badge-default');
+    });
+
+    /* ---- Group papers by year (parses venue text like "ISCA 2026") ---- */
+    document.querySelectorAll('.tab-pane').forEach(pane => {
+      const papers = Array.from(pane.querySelectorAll(':scope > .paper'));
+      let lastYear = null;
+      papers.forEach(p => {
+        const venueEl = p.querySelector('p i');
+        if (!venueEl) return;
+        const m = venueEl.textContent.match(/(19|20)\d{2}/);
+        if (!m) return;
+        const year = m[0];
+        if (year !== lastYear) {
+          const sep = document.createElement('div');
+          sep.className = 'year-separator';
+          sep.innerHTML = `<span class="year-label">${year}</span>`;
+          pane.insertBefore(sep, p);
+          lastYear = year;
+        }
+      });
+    });
+
+    /* ---- Section anchor links (GitHub-style # on hover) ---- */
+    document.querySelectorAll('.docs-section[id]').forEach(sec => {
+      const h = sec.querySelector('h4');
+      if (!h) return;
+      const a = document.createElement('a');
+      a.className = 'anchor-link';
+      a.href = '#' + sec.id;
+      a.setAttribute('aria-label', 'Link to this section');
+      a.textContent = '#';
+      h.insertBefore(a, h.firstChild);
+    });
+
+    /* ---- Cursor-following highlight on paper cards ---- */
+    document.querySelectorAll('.paper').forEach(card => {
+      card.addEventListener('pointermove', e => {
+        const r = card.getBoundingClientRect();
+        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+        card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
+      });
+    });
+
+    /* ---- Last-updated stamp ---- */
+    (function () {
+      const el = document.getElementById('last-updated');
+      if (!el) return;
+      const d = new Date(document.lastModified);
+      el.textContent = d.toLocaleDateString('en-US',
+        { year: 'numeric', month: 'short', day: 'numeric' });
+      el.dateTime = d.toISOString();
+    })();
+
+    /* ---- Collapsible BibTeX (only activates if a .paper has a hidden .paper-bib) ---- */
+    document.querySelectorAll('.paper').forEach(paper => {
+      const bib = paper.querySelector('.paper-bib');
+      if (!bib) return;
+      bib.hidden = true;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'button bib-toggle';
+      btn.textContent = 'bib';
+      btn.addEventListener('click', () => {
+        bib.hidden = !bib.hidden;
+        btn.classList.toggle('active', !bib.hidden);
+      });
+      const buttons = paper.querySelector('.paper-buttons');
+      if (buttons) buttons.appendChild(btn);
+    });
+  </script>
+  <script type="module">
+    import { animate, stagger, onScroll } from 'https://cdn.jsdelivr.net/npm/animejs@4.0.2/+esm';
+
+    /* ---- Side dot nav: scroll spy + label reveal ---- */
+    (function () {
+      const list = document.querySelector('.navbar-list');
+      if (!list) return;
+      const links = Array.from(list.querySelectorAll('.navbar-link'));
+
+      // Wrap each link: <dot> + <label>
+      links.forEach(l => {
+        const text = l.textContent.trim();
+        l.innerHTML = `<span class="nav-label">${text}</span><span class="nav-dot"></span>`;
+      });
+
+      function setActive(link) {
+        links.forEach(l => l.classList.toggle('active', l === link));
+      }
+
+      const sections = links
+        .map(l => {
+          const id = (l.getAttribute('href') || '').split('#')[1];
+          return id ? { link: l, el: document.getElementById(id) } : null;
+        })
+        .filter(s => s && s.el);
+
+      function onScrollSpy() {
+        const y = window.scrollY + 140;
+        let current = sections[0];
+        for (const s of sections) {
+          if (s.el.offsetTop <= y) current = s;
+        }
+        if (current && !current.link.classList.contains('active')) {
+          setActive(current.link);
+        }
+      }
+      window.addEventListener('scroll', onScrollSpy, { passive: true });
+      requestAnimationFrame(() => {
+        setActive(links[0]);
+        onScrollSpy();
+      });
+    })();
+
+    // Mark targets as reveal
+    document.querySelectorAll(
+      '.docs-section h4, .paper, #News li, #bio p, .tab-nav'
+    ).forEach(el => el.classList.add('reveal'));
+
+    // Hero entrance (one-shot, not scroll-triggered)
+    animate('.main-description > *', {
+      opacity: [0, 1],
+      y: [18, 0],
+      delay: stagger(70, { start: 80 }),
+      duration: 700,
+      ease: 'outExpo',
+    });
+    animate('.three.columns img', {
+      opacity: [0, 1],
+      scale: [0.92, 1],
+      duration: 800,
+      ease: 'outExpo',
+    });
+
+    /* ---- Drawn squiggle underline under each section header ---- */
+    (function () {
+      const headers = document.querySelectorAll('.docs-section h4');
+      headers.forEach((h, i) => {
+        const wrap = document.createElement('span');
+        wrap.style.cssText = 'display:block;line-height:0;margin-top:6px;';
+        wrap.innerHTML = `
+          <svg width="160" height="10" viewBox="0 0 160 10" fill="none"
+               xmlns="http://www.w3.org/2000/svg" style="display:block;overflow:visible;">
+            <path class="section-underline"
+                  d="M2 6 C 30 1, 60 9, 90 5 S 140 2, 158 6"
+                  stroke="url(#sectionGrad${i})" stroke-width="2.2"
+                  stroke-linecap="round" fill="none"/>
+            <defs>
+              <linearGradient id="sectionGrad${i}" x1="0" y1="0" x2="160" y2="0"
+                              gradientUnits="userSpaceOnUse">
+                <stop offset="0" stop-color="#1f5132"/>
+                <stop offset="1" stop-color="#2f7a4d"/>
+              </linearGradient>
+            </defs>
+          </svg>`;
+        h.appendChild(wrap);
+
+        const path = wrap.querySelector('.section-underline');
+        const len = path.getTotalLength();
+        path.style.strokeDasharray = len;
+        path.style.strokeDashoffset = len;
+
+        // Use IntersectionObserver: draw once when section enters viewport,
+        // and immediately for any sections already visible on load.
+        const io = new IntersectionObserver((entries, obs) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              animate(path, {
+                strokeDashoffset: [len, 0],
+                duration: 1100,
+                ease: 'inOutQuad',
+              });
+              obs.unobserve(entry.target);
+            }
+          });
+        }, { rootMargin: '0px 0px -10% 0px' });
+        io.observe(h);
+      });
+    })();
+  </script>
 
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->

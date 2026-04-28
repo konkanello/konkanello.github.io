@@ -20,7 +20,15 @@ h4 {
 .paper p {
   margin-bottom: 2px }
 .paper-buttons {
-  margin-top: 5px }
+  margin-top: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.paper-buttons .award-badge {
+  margin-left: auto;
+}
 .paper .button {
   display: inline-block;
   height: 25px;
@@ -85,57 +93,6 @@ h4 {
 @media (min-width: 550px) {
   .header {
     margin-top: 5rem; }
-}
-
-/* Dark mode */
-@media (prefers-color-scheme: dark) {
-  body {
-    background: #1a1a2e;
-    color: #e0e0e0; }
-  a {
-    color: #64b5f6; }
-  a:hover {
-    color: #90caf9; }
-  .navbar,
-  .navbar-spacer {
-    background: #1a1a2e;
-    border-color: #333; }
-  .navbar-link {
-    color: #e0e0e0; }
-  .navbar-link.active {
-    color: #64b5f6; }
-  .docs-section {
-    border-top-color: #333; }
-  .footer {
-    color: rgba(255, 255, 255, 0.5);
-    border-top-color: #333; }
-  .paper .button {
-    color: #64b5f6;
-    border-color: #64b5f6; }
-  .paper .button:hover {
-    background: #64b5f6;
-    color: #1a1a2e; }
-  .award-badge {
-    background: #e6a817; }
-  .popover {
-    background: #2a2a3e;
-    border-color: #444; }
-  .popover-link {
-    color: #e0e0e0;
-    border-bottom-color: #444; }
-  .popover-link:hover {
-    background: #64b5f6;
-    color: #1a1a2e; }
-  .tab-nav .button {
-    color: #e0e0e0;
-    border-color: #555; }
-  .tab-nav .button.active {
-    color: #64b5f6;
-    border-color: #64b5f6; }
-  .project-image-container {
-    border-color: rgba(255, 255, 255, 0.2); }
-  .timeline .flag {
-    background: #2a2a3e; }
 }
 
 /* Larger than tablet */
@@ -251,4 +208,660 @@ h4 {
   .popover-link:hover,
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
+}
+
+/* ================================================================
+   Aesthetic refresh — inspired by anime.js v4 (light variant)
+   ================================================================ */
+
+:root {
+  --accent: #1f5132;        /* dark forest green */
+  --accent-2: #2f7a4d;      /* mid forest green */
+  --accent-soft: rgba(31, 81, 50, 0.08);
+  --text: #14241b;
+  --muted: #5a6b62;
+  --border: #e4e9e5;
+  --card-bg: #ffffff;
+  --bg: #f7f9f7;
+  --radius: 10px;
+  --mono: 'JetBrains Mono', 'SF Mono', 'Menlo', 'Consolas', monospace;
+  --sans: 'Inter', 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at 15% -10%, rgba(31, 81, 50, 0.10), transparent 40%),
+    radial-gradient(circle at 95% 10%, rgba(47, 122, 77, 0.08), transparent 45%),
+    var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--sans);
+  font-feature-settings: 'cv11', 'ss01', 'ss03';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.005em;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+a:hover {
+  color: var(--accent-2);
+  border-bottom-color: currentColor;
+}
+
+/* ---- Hero ---- */
+.header {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.main-description h1 {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 3.6rem;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: var(--text);
+  margin-bottom: 0.8rem;
+}
+.main-description p {
+  color: var(--muted);
+  font-size: 1.7rem;
+  line-height: 1.5;
+}
+.main-description p:nth-of-type(2) {
+  font-family: var(--mono);
+  font-size: 1.45rem;
+  color: var(--text);
+  margin-top: 0.4rem;
+}
+
+.three.columns img {
+  border-radius: 50%;
+  box-shadow: 0 6px 24px rgba(31, 81, 50, 0.20), 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.4s cubic-bezier(.2,.8,.2,1), box-shadow 0.4s ease;
+}
+.three.columns img:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(47, 122, 77, 0.28), 0 4px 10px rgba(0,0,0,0.06);
+}
+
+/* Social icons */
+.main-description .hero-socials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.main-description .hero-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  font-size: 18px;
+  color: var(--muted);
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  transition: all 0.25s cubic-bezier(.2,.8,.2,1);
+}
+.main-description .hero-socials a:hover {
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  border-color: transparent;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(31, 81, 50, 0.32);
+}
+.main-description .hero-socials a svg {
+  width: 17px;
+  height: 17px;
+}
+.main-description .hero-socials a.dblp-pill {
+  width: auto;
+  padding: 0 14px;
+  border-radius: 19px;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Hero "currently working on" tag */
+.main-description .hero-tag {
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  color: var(--muted);
+  margin-top: 0.6rem;
+}
+.main-description .hero-tag span {
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 1px 8px;
+  border-radius: 4px;
+}
+
+/* Legacy fa/ai single-icon styles kept harmless for footer fallback */
+.main-description .fa,
+.main-description .ai {
+  font-size: 18px;
+}
+
+/* ---- Section headers ---- */
+.docs-section {
+  border-top: 1px solid var(--border);
+  padding: 4.5rem 0 3rem;
+}
+.docs-section h4 {
+  position: relative;
+  font-family: var(--mono);
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-transform: lowercase;
+  color: var(--text);
+  padding-left: 0;
+  margin-bottom: 2.4rem;
+}
+.docs-section h4::before {
+  content: '##  ';
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* ---- Bio paragraph ---- */
+#bio p {
+  font-size: 1.6rem;
+  line-height: 1.7;
+  color: #243028;
+}
+
+/* ---- News ---- */
+#News ul {
+  list-style: none;
+  padding-left: 0;
+}
+#News li {
+  position: relative;
+  padding: 14px 16px 14px 24px;
+  margin-bottom: 6px;
+  border-radius: var(--radius);
+  font-size: 1.5rem;
+  line-height: 1.6;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+#News li::before {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 26px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+#News li:hover {
+  background: var(--accent-soft);
+  transform: translateX(2px);
+}
+#News li b {
+  font-family: var(--mono);
+  font-size: 0.92em;
+  color: var(--accent);
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* ---- Papers ---- */
+.paper {
+  position: relative;
+  padding: 18px 20px;
+  margin-bottom: 14px;
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  transition: transform 0.25s cubic-bezier(.2,.8,.2,1),
+              box-shadow 0.25s ease,
+              border-color 0.25s ease;
+}
+.paper::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 12px;
+  bottom: 12px;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), var(--accent-2));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+.paper:hover {
+  transform: translateY(-2px);
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 10px 24px rgba(15, 15, 40, 0.06), 0 2px 6px rgba(15, 15, 40, 0.04);
+}
+.paper:hover::before {
+  opacity: 1;
+}
+.paper .title {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  margin-bottom: 8px !important;
+  color: var(--text);
+}
+.paper p {
+  font-size: 1.4rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.paper p i {
+  font-family: var(--mono);
+  font-style: normal;
+  font-size: 1.25rem;
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.paper .button {
+  height: 32px;
+  line-height: 30px;
+  padding: 0 16px;
+  font-family: var(--mono);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: lowercase;
+  color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-right: 4px;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+}
+.paper .button:hover {
+  color: var(--accent);
+  background: rgba(31, 81, 50, 0.06);
+  border-color: rgba(31, 81, 50, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Award badge */
+.award-badge {
+  display: inline-block;
+  background: rgba(212, 166, 74, 0.08);
+  color: #6b4d10;
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: 0.02em;
+  padding: 4px 12px;
+  border: 1px solid rgba(212, 166, 74, 0.35);
+  border-radius: 12px;
+  box-shadow: none;
+  vertical-align: middle;
+}
+
+/* ---- Tabs (Selected / All) ---- */
+.tab-nav {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 8px;
+}
+.tab-nav li {
+  margin-bottom: 0;
+}
+.tab-nav .button {
+  font-family: var(--mono);
+  font-size: 1.15rem;
+  text-transform: lowercase;
+  height: 38px;
+  line-height: 36px;
+  padding: 0 20px;
+  border-radius: 19px;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  background: transparent;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  cursor: pointer;
+}
+.tab-nav .button:hover {
+  color: var(--accent);
+  border-color: rgba(31, 81, 50, 0.35);
+  background: transparent;
+}
+.tab-nav .button.active {
+  color: var(--accent);
+  background: rgba(31, 81, 50, 0.08);
+  border-color: rgba(31, 81, 50, 0.35);
+}
+.tab-nav .button.active:hover {
+  color: var(--accent);
+  background: rgba(31, 81, 50, 0.12);
+}
+
+/* ---- Navbar (side dot nav) ---- */
+@media (min-width: 750px) {
+  .navbar-spacer { display: none !important; }
+  .navbar {
+    position: fixed !important;
+    top: 50% !important;
+    right: 24px;
+    left: auto !important;
+    transform: translateY(-50%);
+    width: auto !important;
+    height: auto !important;
+    background: transparent !important;
+    border: none !important;
+    z-index: 100;
+  }
+  .navbar > .container {
+    width: auto !important;
+    margin: 0;
+    padding: 0;
+  }
+  .navbar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .navbar-item {
+    float: none;
+    margin: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .navbar-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: lowercase;
+    letter-spacing: 0;
+    line-height: 1;
+    padding: 0;
+    margin: 0;
+    color: var(--muted);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .navbar-link::after { display: none !important; }
+  /* Label pill (hidden by default, slides in on hover/active) */
+  .navbar-link .nav-label {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: saturate(180%) blur(12px);
+    -webkit-backdrop-filter: saturate(180%) blur(12px);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    box-shadow: 0 4px 12px rgba(15, 15, 40, 0.06);
+    opacity: 0;
+    transform: translateX(8px);
+    transition: opacity 0.25s ease, transform 0.25s cubic-bezier(.2,.8,.2,1);
+    pointer-events: none;
+  }
+  /* Dot */
+  .navbar-link .nav-dot {
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid var(--muted);
+    transition: all 0.25s cubic-bezier(.2,.8,.2,1);
+  }
+  .navbar-link:hover .nav-dot {
+    border-color: var(--accent);
+    transform: scale(1.15);
+  }
+  .navbar-link:hover .nav-label,
+  .navbar-link.active .nav-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .navbar-link.active {
+    color: var(--text);
+  }
+  .navbar-link.active .nav-dot {
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    border-color: transparent;
+    box-shadow: 0 0 0 4px rgba(31, 81, 50, 0.15),
+                0 4px 10px rgba(31, 81, 50, 0.3);
+    transform: scale(1.1);
+  }
+  .has-docked-nav .navbar {
+    position: fixed !important;
+    top: 50% !important;
+  }
+}
+
+@media (max-width: 749px) {
+  .navbar { display: none; }
+}
+
+/* ---- Footer ---- */
+.footer {
+  border-top: 1px solid var(--border);
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+  padding: 30px 0 50px;
+}
+
+/* ---- Vita / Timeline (override external timeline.css purple) ---- */
+.timeline .flag:before {
+  border-color: var(--accent) !important;
+}
+.timeline .time-wrapper {
+  color: var(--accent) !important;
+}
+.timeline .flag {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--border);
+  font-family: var(--sans);
+  color: var(--text);
+}
+.timeline .direction-l .flag:after {
+  border-left-color: var(--card-bg) !important;
+}
+.timeline .direction-r .flag:after {
+  border-right-color: var(--card-bg) !important;
+}
+.timeline .time {
+  background: var(--accent-soft) !important;
+  color: var(--accent) !important;
+  font-family: var(--mono);
+  border-radius: 4px;
+}
+.timeline .desc {
+  color: var(--muted);
+}
+.timeline a {
+  color: var(--accent);
+}
+.timeline a:hover {
+  color: var(--accent-2);
+}
+
+/* ---- Reveal-on-scroll initial state (only when JS active) ---- */
+/* Intentionally empty — anime.js drives opacity/transform from-values to avoid
+   flashes of invisible content if the scroll observer doesn't trigger. */
+
+/* ---- Mobile tweaks ---- */
+@media (max-width: 549px) {
+  .main-description h1 {
+    font-size: 2.6rem;
+  }
+  .main-description p {
+    font-size: 1.4rem;
+  }
+  .header {
+    text-align: center;
+  }
+  .three.columns img {
+    max-width: 140px;
+    margin: 0 auto 20px;
+  }
+}
+
+/* ================================================================
+   Author name highlight, year separator, anchors, badge variants,
+   cursor highlight, footer meta, BibTeX collapse
+   ================================================================ */
+
+/* My name in author lists */
+.paper p b.me {
+  color: var(--accent);
+  background: linear-gradient(180deg, transparent 70%, var(--accent-soft) 70%);
+  padding: 0 2px;
+  border-radius: 2px;
+}
+
+/* Year separator in publication tabs */
+.year-separator {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0 14px;
+}
+.year-separator::before,
+.year-separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+.year-separator .year-label {
+  font-family: var(--mono);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.05em;
+}
+
+/* Section anchor links */
+.anchor-link {
+  display: inline-block;
+  font-family: var(--mono);
+  font-size: 0.7em;
+  color: var(--muted);
+  opacity: 0;
+  text-decoration: none;
+  border: none;
+  transition: opacity 0.2s ease, color 0.2s ease;
+  margin-right: 6px;
+  vertical-align: middle;
+}
+.anchor-link:hover {
+  color: var(--accent);
+  border: none;
+}
+.docs-section h4:hover .anchor-link {
+  opacity: 1;
+}
+
+/* Award badge tier variants */
+.award-badge.badge-best {
+  background: rgba(212, 166, 74, 0.10);
+  color: #6b4d10;
+  border-color: rgba(212, 166, 74, 0.45);
+}
+.award-badge.badge-distinguished {
+  background: rgba(31, 81, 50, 0.08);
+  color: var(--accent);
+  border-color: rgba(31, 81, 50, 0.35);
+}
+
+/* Cursor-following highlight on paper cards */
+.paper {
+  --mx: 50%;
+  --my: 50%;
+  position: relative;
+  overflow: hidden;
+}
+.paper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+  background: radial-gradient(
+    320px circle at var(--mx) var(--my),
+    rgba(31, 81, 50, 0.06),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 0;
+}
+.paper:hover::after { opacity: 1; }
+.paper > * { position: relative; z-index: 1; }
+
+/* Footer */
+.footer .footer-socials {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+.footer .footer-socials a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  transition: all 0.2s ease;
+}
+.footer .footer-socials a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.footer .footer-socials a svg {
+  width: 14px;
+  height: 14px;
+}
+.footer-meta {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+/* Collapsible BibTeX */
+.paper-bib {
+  margin-top: 10px;
+  padding: 12px 14px;
+  background: rgba(31, 81, 50, 0.04);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-family: var(--mono);
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  overflow-x: auto;
+  color: var(--text);
+}
+.bib-toggle.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-color: rgba(31, 81, 50, 0.4);
 }
