@@ -417,6 +417,11 @@ a:hover {
   font-weight: 600;
   margin-right: 6px;
 }
+#News .paper-hl {
+  color: var(--accent);
+  font-weight: 600;
+  font-style: normal;
+}
 
 /* ---- Papers ---- */
 .paper {
