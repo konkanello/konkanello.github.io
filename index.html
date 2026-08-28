@@ -6,16 +6,22 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   <title>Konstantinos Kanellopoulos | Home</title>
-  <meta name="description" content="PhD Student at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems.">
+  <meta name="description" content="Senior Researcher at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems.">
   <meta name="author" content="Konstantinos Kanellopoulos">
-  <meta name="theme-color" content="#1a2a4f">
+  <meta name="theme-color" content="#070b14">
+  <script>
+    /* Apply saved theme before first paint to avoid flash */
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.setAttribute('data-theme', 'light');
+    }
+  </script>
 
   <!-- Open Graph -->
   <meta property="og:title" content="Konstantinos Kanellopoulos" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://konkanello.github.io" />
   <meta property="og:site_name" content="Konstantinos Kanellopoulos" />
-  <meta property="og:description" content="PhD Student at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems." />
+  <meta property="og:description" content="Senior Researcher at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems." />
   <meta property="og:image" content="https://konkanello.github.io/assets/profile-pics/cv_pic.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="1200" />
@@ -26,7 +32,7 @@
   <meta name="twitter:site" content="@konkanello" />
   <meta name="twitter:creator" content="@konkanello" />
   <meta name="twitter:title" content="Konstantinos Kanellopoulos" />
-  <meta name="twitter:description" content="PhD Student at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems." />
+  <meta name="twitter:description" content="Senior Researcher at ETH Zurich, SAFARI Research Group. Research in computer architecture, memory systems, and operating systems." />
   <meta name="twitter:image" content="https://konkanello.github.io/assets/profile-pics/cv_pic.png" />
 
   <link rel="canonical" href="https://konkanello.github.io" />
@@ -40,7 +46,7 @@
     "url": "https://konkanello.github.io",
     "image": "https://konkanello.github.io/assets/profile-pics/cv_pic.png",
     "email": "konkanello@gmail.com",
-    "jobTitle": "PhD Student",
+    "jobTitle": "Senior Researcher",
     "affiliation": {
       "@type": "Organization",
       "name": "ETH Zurich — SAFARI Research Group",
@@ -86,10 +92,6 @@
   <!-- Skeleton tabs (CSS only — JS replaced by inline vanilla handler) -->
   <link rel="stylesheet" href="/libs/external/skeleton_tabs/skeleton-tabs.css">
 
-  <!-- Timeline
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="/libs/external/timeline.css">
-
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="/libs/icon.png">
@@ -98,37 +100,39 @@
 </head>
 <body>
 
+  <button type="button" class="theme-toggle" aria-label="Toggle light/dark mode" title="Toggle light/dark mode">
+    <i class="fa fa-sun-o" aria-hidden="true"></i>
+  </button>
+
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
 
     <section class="header">
-      <div class="row">
-        <div class="three columns">
-          <a href="/"><img class="u-max-full-width" src="/assets/profile-pics/cv_pic.png"
+      <div class="hero">
+        <div class="hero-photo">
+          <a href="/"><img src="/assets/profile-pics/cv_pic.png"
                            alt="Konstantinos Kanellopoulos" decoding="async"></a>
         </div>
-        <div class="nine columns main-description">
-            <h1>Konstantinos Kanellopoulos</h1>
-            <p>PhD Student @ SAFARI Research Group - ETH Zurich</p>
-            <p>konkanello [AT] gmail.com</p>
-            <p class="hero-socials">
-              <a href="https://www.linkedin.com/in/konkanello/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-              </a>
-
-              <a href="https://github.com/konkanello" target="_blank" rel="noopener" aria-label="GitHub">
-                <i class="fa fa-github" aria-hidden="true"></i>
-              </a>
-
-              <a href="https://scholar.google.com/citations?user=6QgXle8AAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
-                <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
-              </a>
-
-              <a href="https://dblp.org/pid/250/8887.html" target="_blank" rel="noopener" aria-label="DBLP" class="dblp-pill">
-                DBLP
-              </a>
-            </p>
+        <div class="main-description">
+          <h1>Konstantinos Kanellopoulos</h1>
+          <p class="hero-tagline">Computer Architect</p>
+          <p class="hero-role">Senior Researcher @ SAFARI Research Group - ETH Zurich</p>
+          <p class="hero-email"><a href="mailto:konkanello@gmail.com"><i class="fa fa-envelope-o" aria-hidden="true"></i> konkanello@gmail.com</a></p>
+          <p class="hero-socials">
+            <a href="https://www.linkedin.com/in/konkanello/" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+            </a>
+            <a href="https://github.com/konkanello" target="_blank" rel="noopener" aria-label="GitHub">
+              <i class="fa fa-github" aria-hidden="true"></i>
+            </a>
+            <a href="https://scholar.google.com/citations?user=6QgXle8AAAAJ&amp;hl=en" target="_blank" rel="noopener" aria-label="Google Scholar">
+              <i class="ai ai-google-scholar ai-lg" aria-hidden="true"></i>
+            </a>
+            <a href="https://dblp.org/pid/250/8887.html" target="_blank" rel="noopener" aria-label="DBLP" class="dblp-pill">
+              DBLP
+            </a>
+          </p>
         </div>
       </div>
     </section>
@@ -139,11 +143,12 @@
         <ul class="navbar-list">
           <li class="navbar-item"><a class="navbar-link" href="/index.html#bio">Bio</a></li>
           <!--<li class="navbar-item"><a class="navbar-link" href=/index.html#prospective-students>Prospective Students</a></li>-->
+          <li class="navbar-item"><a class="navbar-link" href="/index.html#education">Education</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/index.html#experience">Experience</a></li>
+          <li class="navbar-item"><a class="navbar-link" href="/index.html#awards">Awards</a></li>
           <li class="navbar-item"><a class="navbar-link" href="/index.html#publications">Publications</a></li>
           <!--<li class="navbar-item"><a class="navbar-link" href=/index.html#projects>Projects</a></li>-->
-          <li class="navbar-item"><a class="navbar-link" href="/index.html#awards">Awards</a></li>
           <li class="navbar-item"><a class="navbar-link" href="/index.html#service">Service</a></li>
-          <li class="navbar-item"><a class="navbar-link" href="/index.html#resume">Vita</a></li>
         </ul>
       </div>
     </nav>
@@ -151,6 +156,8 @@
     <!-- ========== BIO ========== -->
 <div class="docs-section" id="bio">
   <h4>Bio</h4>
+
+  <!-- Old long intro, kept for reference
   <p>
     I recently completed my PhD at ETH Zurich (defended May 2026), advised by Prof. Onur Mutlu at the SAFARI Research Group.
 My research lies at the intersection of hardware, software, and operating systems with a focus on high performance,
@@ -160,7 +167,6 @@ My research lies at the intersection of hardware, software, and operating system
   HPCA and DSN. Our work has been recognized with Best Paper Awards at MICRO 2022, HiPEAC 2023, and ISCA 2024, and
   Distinguished Artifact Awards at MICRO 2023 and HPCA 2026. I recently joined SIGMICRO's hall of fame ( > 8 papers published in MICRO) thanks to many great collaborations.
   </p>
-
   <p>
   <b>Research vision.</b> My research centers on hardware/OS co-design: rethinking the contracts across the
   application&ndash;OS&ndash;hardware stack to build efficient, programmable, and predictable systems.
@@ -173,15 +179,90 @@ My research lies at the intersection of hardware, software, and operating system
   (<span class="paper-hl">Argus</span>, <span class="paper-hl">Valinor</span>); and (iii) building the systems
   foundations for robust and safe Physical AI through self-optimizing, deadline-aware full-stack systems.
   </p>
-
   <p>
   Before joining ETH, I got my 5-year diploma (integrated Master's) at the National Technical University of Athens (NTUA) in Greece where
   I conducted my thesis with Prof. Georgios Goumas and Prof. Nectarios Koziris.
   I also spent some time as a visiting student at the Huawei Research Center in Zurich, working with Dr. Davide Basilio Bartolini.
   </p>
+  -->
+
+  <p>
+    I am a computer architect. I recently completed my PhD at ETH Zurich (defended May 2026),
+    advised by Prof. Onur Mutlu in the SAFARI Research Group. Before that, I received my Diploma
+    (5-year integrated Master's) in Electrical and Computer Engineering from the National Technical
+    University of Athens (NTUA) in Greece. My work has appeared at venues such as MICRO, ISCA,
+    ASPLOS, HPCA, and DSN, and some of it has received best-paper and artifact
+    recognitions.
+  </p>
+
+  <p>
+    <b>Research vision.</b> My research is driven by a deep interest in application–OS–hardware co-design, 
+    which I believe offers a powerful path toward building high-performance, energy-efficient, programmable, 
+    and predictable computer systems. 
+    I am particularly interested in rethinking how applications, operating systems, and hardware work together, 
+    rather than optimizing each layer in isolation. I currently focus on three closely connected challenges: 
+    (i) redesigning how computers manage memory so that modern data-intensive applications execute efficiently
+     without giving up compatibility or ease of programming; 
+    (ii) rethinking processor design for the AI era, where modern workloads increasingly rely on the CPU and operating system for critical services such as memory management, scheduling, and communication; and (iii) building the systems foundations for Physical AI, where computers control robots and other machines in the real world and where timely, predictable execution is essential for safety.
+
+  </p>
 
   <p class="bio-jobmarket"><b>On the academic job market.</b> I am applying for tenure-track faculty positions in the 2026/2027 cycle. If you think there might be a good fit at your department, or you'd simply like to chat about my research, please reach out at <a href="mailto:konkanello@gmail.com">konkanello@gmail.com</a>. I would love to hear from you.</p>
+
+  <p>
+    <b>Beyond research.</b> In my free time, I try to cook either avant-garde French dishes or traditional Greek ones, watch movies
+    (lots of movies), play tennis (and sometimes padel), and appreciate or practice forms of art
+    on the electric guitar and the piano. I am also very determined to find a way to host a computer
+    architecture conference on my favorite Cycladic islands, Syros and Tinos (Samos already has one). Lately, I relate
+    a lot to this poem by Cavafy, &ldquo;Ithaka.&rdquo;
+  </p>
+
+  <details class="ithaka">
+    <summary>Ithaka by Cavafy</summary>
+    <blockquote class="ithaka-poem">Σα βγεις στον πηγαιμό για την Ιθάκη,
+να εύχεσαι νά &rsquo;ναι μακρύς ο δρόμος,
+γεμάτος περιπέτειες, γεμάτος γνώσεις.
+Τους Λαιστρυγόνας και τους Κύκλωπας,
+τον θυμωμένο Ποσειδώνα μη φοβάσαι,
+τέτοια στον δρόμο σου ποτέ σου δεν θα βρεις,
+αν μέν&rsquo; η σκέψις σου υψηλή, αν εκλεκτή
+συγκίνησις το πνεύμα και το σώμα σου αγγίζει.
+Τους Λαιστρυγόνας και τους Κύκλωπας,
+τον άγριο Ποσειδώνα δεν θα συναντήσεις,
+αν δεν τους κουβανείς μες στην ψυχή σου,
+αν η ψυχή σου δεν τους στήνει εμπρός σου.
+
+Να εύχεσαι νά &rsquo;ναι μακρύς ο δρόμος.
+Πολλά τα καλοκαιρινά πρωιά να είναι
+που με τι ευχαρίστησι, με τι χαρά
+θα μπαίνεις σε λιμένας πρωτοειδωμένους&middot;
+να σταματήσεις σ&rsquo; εμπορεία Φοινικικά,
+και τες καλές πραγμάτειες ν&rsquo; αποκτήσεις,
+σεντέφια και κοράλλια, κεχριμπάρια κ&rsquo; έβενους,
+και ηδονικά μυρωδικά κάθε λογής,
+όσο μπορείς πιο άφθονα ηδονικά μυρωδικά&middot;
+σε πόλεις Αιγυπτιακές πολλές να πας,
+να μάθεις και να μάθεις απ&rsquo; τους σπουδασμένους.
+
+Πάντα στον νου σου νά &rsquo;χεις την Ιθάκη.
+Το φθάσιμον εκεί είν&rsquo; ο προορισμός σου.
+Αλλά μη βιάζεις το ταξείδι διόλου.
+Καλλίτερα χρόνια πολλά να διαρκέσει&middot;
+και γέρος πια ν&rsquo; αράξεις στο νησί,
+πλούσιος με όσα κέρδισες στον δρόμο,
+μη προσδοκώντας πλούτη να σε δώσει η Ιθάκη.
+
+Η Ιθάκη σ&rsquo; έδωσε τ&rsquo; ωραίο ταξείδι.
+Χωρίς αυτήν δεν θά &rsquo;βγαινες στον δρόμο.
+Άλλα δεν έχει να σε δώσει πια.
+
+Κι αν πτωχική την βρεις, η Ιθάκη δεν σε γέλασε.
+Έτσι σοφός που έγινες, με τόση πείρα,
+ήδη θα το κατάλαβες η Ιθάκες τι σημαίνουν.</blockquote>
+  </details>
 </div>
+
+
 
 <div class="docs-section" id="News">
   <h4>News</h4>
@@ -214,6 +295,114 @@ My research lies at the intersection of hardware, software, and operating system
 
 
 
+
+<!-- ========== EDUCATION ========== -->
+<div class="docs-section" id="education">
+  <h4>Education</h4>
+
+  <div class="vitae-list">
+
+    <div class="vitae-card vitae-edu">
+      <div class="vitae-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+      <div class="vitae-body">
+        <div class="vitae-top">
+          <span class="vitae-org">ETH Zurich &mdash; D-ITET</span>
+          <span class="vitae-time">Sep 2020 &ndash; Present</span>
+        </div>
+        <div class="vitae-role">PhD (defended May 2026)</div>
+        <p class="vitae-desc">Hardware-software-OS cooperative techniques, advised by Prof. Onur Mutlu @ SAFARI Research Group</p>
+      </div>
+    </div>
+
+    <div class="vitae-card vitae-edu">
+      <div class="vitae-icon"><i class="fa fa-flask" aria-hidden="true"></i></div>
+      <div class="vitae-body">
+        <div class="vitae-top">
+          <span class="vitae-org">ETH Zurich &mdash; D-INFK</span>
+          <span class="vitae-time">2018 &ndash; 2020</span>
+        </div>
+        <div class="vitae-role">Research Internship</div>
+        <p class="vitae-desc">Advised by Prof. Onur Mutlu and Prof. Nandita Vijaykumar @ SAFARI Research Group</p>
+      </div>
+    </div>
+
+    <div class="vitae-card vitae-edu">
+      <div class="vitae-icon"><i class="fa fa-graduation-cap" aria-hidden="true"></i></div>
+      <div class="vitae-body">
+        <div class="vitae-top">
+          <span class="vitae-org">NTUA</span>
+          <span class="vitae-time">2012 &ndash; 2017</span>
+        </div>
+        <div class="vitae-role">Integrated Master's Degree</div>
+        <p class="vitae-desc">National Technical University of Athens, School of Electrical and Computer Engineering</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== PROFESSIONAL EXPERIENCE ========== -->
+<div class="docs-section" id="experience">
+  <h4>Professional Experience</h4>
+
+  <div class="vitae-list">
+
+    <div class="vitae-card vitae-work">
+      <div class="vitae-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+      <div class="vitae-body">
+        <div class="vitae-top">
+          <span class="vitae-org">Microsoft Research Cambridge, UK</span>
+          <span class="vitae-time">Jun &ndash; Sep 2025</span>
+        </div>
+        <div class="vitae-role">Research Intern</div>
+        <p class="vitae-desc">Hardware/OS co-design for efficient scheduling of Physical AI applications</p>
+      </div>
+    </div>
+
+    <div class="vitae-card vitae-work">
+      <div class="vitae-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+      <div class="vitae-body">
+        <div class="vitae-top">
+          <span class="vitae-org">Huawei Zurich Research Center</span>
+          <span class="vitae-time">Jan &ndash; Dec 2022</span>
+        </div>
+        <div class="vitae-role">Visiting Researcher</div>
+        <p class="vitae-desc">Microarchitecture optimizations for the address-translation subsystem</p>
+      </div>
+    </div>
+
+    <div class="vitae-card vitae-work">
+      <div class="vitae-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
+      <div class="vitae-body">
+        <div class="vitae-top">
+          <span class="vitae-org">Huawei Zurich Research Center</span>
+          <span class="vitae-time">Jan &ndash; Sep 2021</span>
+        </div>
+        <div class="vitae-role">Visiting Researcher</div>
+        <p class="vitae-desc">Microarchitecture optimizations for the address-translation subsystem</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ========== AWARDS ========== -->
+<div class="docs-section" id="awards">
+  <h4>Awards &amp; Honors</h4>
+
+  <ul>
+    <li><b>2026</b> Distinguished Artifact Award at HPCA &mdash; <span class="paper-hl">Athena: Synergizing Data Prefetching and Off-Chip Prediction via Online Reinforcement Learning</span></li>
+    <li><b>2024</b> SIGMICRO Hall of Fame (included after 8 MICRO publications)</li>
+    <li><b>2024</b> Qualcomm Innovation Fellowship Europe, Finalist (18 of 62 proposals selected)</li>
+    <li><b>2024</b> Best Paper Award at ISCA &mdash; <span class="paper-hl">Constable: Improving Performance and Power Efficiency by Safely Eliminating Load Instruction Execution</span></li>
+    <li><b>2023</b> Best Paper Award at HiPEAC &mdash; <span class="paper-hl">MetaSys: A Practical Open-source Metadata Management System</span></li>
+    <li><b>2023</b> Distinguished Artifact Award at MICRO &mdash; <span class="paper-hl">Victima: Drastically Increasing Address Translation Reach</span></li>
+    <li><b>2023</b> MICRO Student Research Competition, 3rd Place (Graduate Category)</li>
+    <li><b>2022</b> Best Paper Award at MICRO &mdash; <span class="paper-hl">Hermes: Accelerating Long-Latency Load Requests via Perceptron-Based Off-Chip Load Prediction</span></li>
+    <li><b>2022</b> Intel Hardware Security Academic Award, Finalist &mdash; BlockHammer</li>
+    <li><b>2012</b> &ldquo;The Great Moment for Education&rdquo; Eurobank Scholarship, awarded for the best performance in the Greek national qualification exams</li>
+  </ul>
+</div>
 
 <!-- ========== PUBLICATIONS ========== -->
 <div class="docs-section" id="publications">
@@ -1185,23 +1374,8 @@ My research lies at the intersection of hardware, software, and operating system
 </div>
 -->
 
-<!-- ========== AWARDS ========== -->
-<div class="docs-section" id="awards">
-  <h4>Awards &amp; Honors</h4>
 
-  <ul>
-    <li><b>2026</b> Distinguished Artifact Award at HPCA &mdash; <span class="paper-hl">Athena: Synergizing Data Prefetching and Off-Chip Prediction via Online Reinforcement Learning</span></li>
-    <li><b>2024</b> SIGMICRO Hall of Fame (included after 8 MICRO publications)</li>
-    <li><b>2024</b> Qualcomm Innovation Fellowship Europe, Finalist (18 of 62 proposals selected)</li>
-    <li><b>2024</b> Best Paper Award at ISCA &mdash; <span class="paper-hl">Constable: Improving Performance and Power Efficiency by Safely Eliminating Load Instruction Execution</span></li>
-    <li><b>2023</b> Best Paper Award at HiPEAC &mdash; <span class="paper-hl">MetaSys: A Practical Open-source Metadata Management System</span></li>
-    <li><b>2023</b> Distinguished Artifact Award at MICRO &mdash; <span class="paper-hl">Victima: Drastically Increasing Address Translation Reach</span></li>
-    <li><b>2023</b> MICRO Student Research Competition, 3rd Place (Graduate Category)</li>
-    <li><b>2022</b> Best Paper Award at MICRO &mdash; <span class="paper-hl">Hermes: Accelerating Long-Latency Load Requests via Perceptron-Based Off-Chip Load Prediction</span></li>
-    <li><b>2022</b> Intel Hardware Security Academic Award, Finalist &mdash; BlockHammer</li>
-    <li><b>2012</b> &ldquo;The Great Moment for Education&rdquo; Eurobank Scholarship, awarded for the best performance in the Greek national qualification exams</li>
-  </ul>
-</div>
+
 
 <!-- ========== SERVICE ========== -->
 <div class="docs-section" id="service">
@@ -1211,7 +1385,7 @@ My research lies at the intersection of hardware, software, and operating system
   <ul>
     <li>HPCA 2027 (Program Committee Member)</li>
     <li>MICRO 2026 (Program Committee Member)</li>
-    <li>HPCA 2026 (Program Committee Member) &mdash; one of the first PhD students invited to serve on the HPCA PC</li>
+    <li>HPCA 2026 (Program Committee Member)</li>
   </ul>
 
   <p><b>Artifact Evaluation Committee</b></p>
@@ -1234,115 +1408,61 @@ My research lies at the intersection of hardware, software, and operating system
     <li>Operating Systems, NTUA &mdash; Lab Assistant, 2018</li>
   </ul>
 
-  <p><b>Selected Recorded Lectures</b></p>
-  <div class="lecture-videos" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px;margin-bottom:1.5em;">
-    <div>
-      <iframe style="width:100%;aspect-ratio:16/9;border:0;border-radius:6px;" src="https://www.youtube-nocookie.com/embed/oEo_kCDwKtE?start=650" title="Virtual Memory (Fall 2025)" loading="lazy" allowfullscreen></iframe>
-      <p style="margin:4px 0 0;font-size:0.9em;">Virtual Memory (Fall '25)</p>
+  <p><b>Selected Recorded Lectures &amp; Talks</b></p>
+  <div class="video-gallery">
+    <div class="video-card" data-id="oEo_kCDwKtE" data-start="650">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/oEo_kCDwKtE/hqdefault.jpg" alt="Virtual Memory (Fall 2025)" loading="lazy">
+        <span class="play-btn" aria-hidden="true"></span>
+      </div>
+      <p class="video-title">Virtual Memory (Fall '25)</p>
     </div>
-    <div>
-      <iframe style="width:100%;aspect-ratio:16/9;border:0;border-radius:6px;" src="https://www.youtube-nocookie.com/embed/2x4oK-ovrAQ?start=2219" title="Prefetching II and Virtual Memory (Spring 2026)" loading="lazy" allowfullscreen></iframe>
-      <p style="margin:4px 0 0;font-size:0.9em;">Prefetching II &amp; VM (Spring '26)</p>
+    <div class="video-card" data-id="2x4oK-ovrAQ" data-start="2219">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/2x4oK-ovrAQ/hqdefault.jpg" alt="Prefetching II and Virtual Memory (Spring 2026)" loading="lazy">
+        <span class="play-btn" aria-hidden="true"></span>
+      </div>
+      <p class="video-title">Prefetching II &amp; VM (Spring '26)</p>
     </div>
-    <div>
-      <iframe style="width:100%;aspect-ratio:16/9;border:0;border-radius:6px;" src="https://www.youtube-nocookie.com/embed/kknn4g0g5ms?start=1175" title="Virtual Memory Seminar (Spring 2026)" loading="lazy" allowfullscreen></iframe>
-      <p style="margin:4px 0 0;font-size:0.9em;">VM Seminar (Spring '26)</p>
+    <div class="video-card" data-id="kknn4g0g5ms" data-start="1175">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/kknn4g0g5ms/hqdefault.jpg" alt="Virtual Memory Seminar (Spring 2026)" loading="lazy">
+        <span class="play-btn" aria-hidden="true"></span>
+      </div>
+      <p class="video-title">VM Seminar (Spring '26)</p>
     </div>
-    <div>
-      <iframe style="width:100%;aspect-ratio:16/9;border:0;border-radius:6px;" src="https://www.youtube-nocookie.com/embed/pPQjdD6br4I?start=3606" title="Virtual Memory II (Spring 2026)" loading="lazy" allowfullscreen></iframe>
-      <p style="margin:4px 0 0;font-size:0.9em;">Virtual Memory II (Spring '26)</p>
+    <div class="video-card" data-id="pPQjdD6br4I" data-start="3606">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/pPQjdD6br4I/hqdefault.jpg" alt="Virtual Memory II (Spring 2026)" loading="lazy">
+        <span class="play-btn" aria-hidden="true"></span>
+      </div>
+      <p class="video-title">Virtual Memory II (Spring '26)</p>
+    </div>
+    <div class="video-card" data-id="giP8NaZp3JA" data-start="250">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/giP8NaZp3JA/hqdefault.jpg" alt="Virtuoso Workshop at ASPLOS 2026" loading="lazy">
+        <span class="play-btn" aria-hidden="true"></span>
+      </div>
+      <p class="video-title">Virtuoso Workshop @ ASPLOS '26</p>
+    </div>
+    <div class="video-card" data-id="fi6ttrmu_OM" data-start="29466">
+      <div class="video-thumb">
+        <img src="https://i.ytimg.com/vi/fi6ttrmu_OM/hqdefault.jpg" alt="Virtuoso Workshop at MICRO 2025" loading="lazy">
+        <span class="play-btn" aria-hidden="true"></span>
+      </div>
+      <p class="video-title">Virtuoso Workshop @ MICRO '25</p>
     </div>
   </div>
 
   <p><b>Organizing</b></p>
   <ul>
+    <li><a href="https://sites.google.com/view/dpc4-2026/home" target="_blank">4th Data Prefetching Championship (DPC-4)</a> &mdash; Co-Organizer, held in conjunction with HPCA 2026, Sydney, Australia</li>
     <li><a href="https://cmu-safari.github.io/Virtuoso/workshop/asplos2026.html" target="_blank">Virtuoso ASPLOS 2026 Workshop and Tutorial</a> (<a href="https://www.youtube.com/watch?v=giP8NaZp3JA&amp;t=250s" target="_blank">video</a>) &mdash; third edition planned for MICRO 2026</li>
     <li><a href="https://cmu-safari.github.io/Virtuoso/workshop/micro2025.html" target="_blank">Virtuoso MICRO 2025 Workshop and Tutorial</a> (<a href="https://www.youtube.com/watch?v=fi6ttrmu_OM&amp;t=29466s" target="_blank">video</a>)</li>
     <li>Project and Seminar on Intelligent Architectures, ETH Zurich, 2020&ndash;2023</li>
   </ul>
 </div>
 
-<!-- ========== RESUME ========== -->
-<div class="docs-section" id="resume">
-  <h4>Vitæ</h4>
-
-  <!-- The Timeline -->
-  <ul class="timeline">
-    
-    <li>
-      
-      <div class="direction-r">
-      
-        <div class="flag-wrapper">
-          <span class="flag">ETH Zurich - D-ITET</span>
-          <span class="time-wrapper"><span class="time">Sep 2020 – Present</span></span>
-        </div>
-        <div class="desc"><b>PhD (defended May 2026)</b> <br/> Working under the supervision of Prof. Onur Mutlu on hardware-software-OS co-operative techniques @ SAFARI Research Group</div>
-      </div>
-    </li>
-    
-    <li>
-      
-      <div class="direction-l">
-      
-        <div class="flag-wrapper">
-          <span class="flag">Microsoft Research Cambridge, UK</span>
-          <span class="time-wrapper"><span class="time">June-Sept 2025</span></span>
-        </div>
-        <div class="desc"><b>Research Intern</b> <br/> Hardware/OS co-design for efficient scheduling of Physical AI applications</div>
-      </div>
-    </li>
-    
-    <li>
-      
-      <div class="direction-l">
-      
-        <div class="flag-wrapper">
-          <span class="flag">Huawei Zurich Research Center</span>
-          <span class="time-wrapper"><span class="time">Jan-Dec 2022</span></span>
-        </div>
-        <div class="desc"><b>Visiting Researcher</b> <br/> Microarchitecture optimizations for the address-translation subsystem</div>
-      </div>
-    </li>
-    
-    <li>
-      
-      <div class="direction-l">
-      
-        <div class="flag-wrapper">
-          <span class="flag">Huawei Zurich Research Center</span>
-          <span class="time-wrapper"><span class="time">Jan-Sept 2021</span></span>
-        </div>
-        <div class="desc"><b>Visiting Researcher</b> <br/> Microarchitecture optimizations for the address-translation subsystem</div>
-      </div>
-    </li>
-    
-    <li>
-      
-      <div class="direction-r">
-      
-        <div class="flag-wrapper">
-          <span class="flag">ETH Zurich - D-INFK</span>
-          <span class="time-wrapper"><span class="time">2018-2020</span></span>
-        </div>
-        <div class="desc"><b>Research Internship</b> <br/> Working under the supervision of Prof. Onur Mutlu and Prof. Nandita Vijaykumar @ SAFARI Research Group</div>
-      </div>
-    </li>
-    
-    <li>
-
-      <div class="direction-l">
-
-        <div class="flag-wrapper">
-          <span class="flag">NTUA</span>
-          <span class="time-wrapper"><span class="time">2012 - 2017</span></span>
-        </div>
-        <div class="desc"><b>Integrated Master's Degree</b> <br/> National Technical University of Athens, School of Electrical and Computer Engineering</div>
-      </div>
-    </li>
-    
-  </ul>
-</div>
 
 
 
@@ -1465,6 +1585,133 @@ My research lies at the intersection of hardware, software, and operating system
       });
     });
 
+    /* ---- Collapsible sections: chevron button on each header ---- */
+    document.querySelectorAll('.docs-section[id]').forEach(sec => {
+      if (sec.id === 'bio') return;
+      const h = sec.querySelector('h4');
+      if (!h) return;
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'section-toggle';
+      btn.setAttribute('aria-label', 'Collapse section');
+      btn.addEventListener('click', () => sec.classList.toggle('collapsed'));
+      h.appendChild(btn);
+    });
+
+    /* ---- Award badges in Awards and News lists (same pills as publications) ---- */
+    document.querySelectorAll('#awards li, #News li').forEach(li => {
+      li.innerHTML = li.innerHTML
+        .replace(/Best Paper Award(s?)/g, '<span class="award-badge badge-best">Best Paper Award$1</span>')
+        .replace(/Distinguished Artifact Award(s?)/g, '<span class="award-badge badge-distinguished">Distinguished Artifact Award$1</span>');
+    });
+
+    /* ---- Light/dark theme toggle ---- */
+    (function () {
+      const btn = document.querySelector('.theme-toggle');
+      const icon = btn.querySelector('i');
+      const meta = document.querySelector('meta[name="theme-color"]');
+      function render() {
+        const light = document.documentElement.getAttribute('data-theme') === 'light';
+        icon.className = light ? 'fa fa-moon-o' : 'fa fa-sun-o';
+        meta.setAttribute('content', light ? '#fafafa' : '#070b14');
+      }
+      btn.addEventListener('click', () => {
+        const light = document.documentElement.getAttribute('data-theme') === 'light';
+        if (light) {
+          document.documentElement.removeAttribute('data-theme');
+          localStorage.setItem('theme', 'dark');
+        } else {
+          document.documentElement.setAttribute('data-theme', 'light');
+          localStorage.setItem('theme', 'light');
+        }
+        render();
+      });
+      render();
+    })();
+
+    /* ---- Easter egg: triple-click the profile photo for a wild encounter ---- */
+    (function () {
+      const photo = document.querySelector('.hero-photo img');
+      if (!photo) return;
+      const dex = [
+        [25, 'PIKACHU'], [6, 'CHARIZARD'], [1, 'BULBASAUR'], [7, 'SQUIRTLE'],
+        [143, 'SNORLAX'], [94, 'GENGAR'], [133, 'EEVEE'], [150, 'MEWTWO'],
+        [149, 'DRAGONITE'], [131, 'LAPRAS'], [132, 'DITTO'], [39, 'JIGGLYPUFF'],
+        [129, 'MAGIKARP'], [54, 'PSYDUCK'], [104, 'CUBONE'], [68, 'MACHAMP'],
+        [65, 'ALAKAZAM'], [58, 'GROWLITHE'], [37, 'VULPIX'], [137, 'PORYGON']
+      ];
+      let clicks = 0, timer = null, open = false;
+
+      function typewrite(el, text, done) {
+        el.textContent = '';
+        let i = 0;
+        (function tick() {
+          if (i < text.length) {
+            el.textContent += text[i++];
+            setTimeout(tick, 28);
+          } else if (done) done();
+        })();
+      }
+
+      function encounter() {
+        if (open) return;
+        open = true;
+        const [num, name] = dex[Math.floor(Math.random() * dex.length)];
+        const overlay = document.createElement('div');
+        overlay.className = 'pkmn-overlay';
+        overlay.innerHTML = `
+          <div class="pkmn-box" role="dialog" aria-label="A wild Pokemon appeared">
+            <img class="pkmn-sprite" alt="${name}"
+                 src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${num}.png">
+            <p class="pkmn-text"></p>
+            <div class="pkmn-actions">
+              <button type="button" class="pkmn-btn" data-act="catch">&#9654; CATCH</button>
+              <button type="button" class="pkmn-btn" data-act="run">&#9654; RUN</button>
+            </div>
+          </div>`;
+        document.body.appendChild(overlay);
+        const box = overlay.querySelector('.pkmn-box');
+        const txt = overlay.querySelector('.pkmn-text');
+        const close = () => { overlay.remove(); open = false; };
+        typewrite(txt, `A wild ${name} appeared!`);
+        overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+        overlay.querySelectorAll('.pkmn-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            overlay.querySelector('.pkmn-actions').style.visibility = 'hidden';
+            if (btn.dataset.act === 'catch') {
+              box.querySelector('.pkmn-sprite').classList.add('pkmn-caught');
+              typewrite(txt, `Gotcha! ${name} was caught!`, () => setTimeout(close, 1400));
+            } else {
+              typewrite(txt, 'Got away safely!', () => setTimeout(close, 900));
+            }
+          }, { once: true });
+        });
+      }
+
+      photo.addEventListener('click', e => {
+        e.preventDefault();
+        clicks++;
+        clearTimeout(timer);
+        timer = setTimeout(() => { clicks = 0; }, 900);
+        if (clicks >= 3) { clicks = 0; encounter(); }
+      });
+    })();
+
+    /* ---- Video gallery: click thumbnail to load YouTube player ---- */
+    document.querySelectorAll('.video-card').forEach(card => {
+      const thumb = card.querySelector('.video-thumb');
+      thumb.addEventListener('click', () => {
+        const id = card.dataset.id;
+        const start = card.dataset.start || 0;
+        const iframe = document.createElement('iframe');
+        iframe.src = `https://www.youtube-nocookie.com/embed/${id}?start=${start}&autoplay=1`;
+        iframe.title = card.querySelector('.video-title').textContent;
+        iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+        iframe.allowFullscreen = true;
+        thumb.replaceChildren(iframe);
+      }, { once: true });
+    });
+
     /* ---- Last-updated stamp ---- */
     (function () {
       const el = document.getElementById('last-updated');
@@ -1548,7 +1795,7 @@ My research lies at the intersection of hardware, software, and operating system
       duration: 700,
       ease: 'outExpo',
     });
-    animate('.three.columns img', {
+    animate('.hero-photo img', {
       opacity: [0, 1],
       scale: [0.92, 1],
       duration: 800,
@@ -1571,8 +1818,8 @@ My research lies at the intersection of hardware, software, and operating system
             <defs>
               <linearGradient id="sectionGrad${i}" x1="0" y1="0" x2="160" y2="0"
                               gradientUnits="userSpaceOnUse">
-                <stop offset="0" stop-color="#1a2a4f"/>
-                <stop offset="1" stop-color="#ea580c"/>
+                <stop offset="0" stop-color="#7aa2f7"/>
+                <stop offset="1" stop-color="#ff8c3b"/>
               </linearGradient>
             </defs>
           </svg>`;
