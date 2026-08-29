@@ -1381,3 +1381,103 @@ a:hover {
   background: var(--accent-soft);
   border-color: rgba(122, 162, 247, 0.4);
 }
+
+/* ================================================================
+   Mobile optimizations (scoped to small screens only)
+   ================================================================ */
+
+.tab-nav {
+  flex-wrap: wrap;
+}
+
+@media (max-width: 749px) {
+  /* Full-width container with comfortable gutters (skeleton uses 85%/80%) */
+  .container {
+    width: 100%;
+    padding: 0 18px;
+  }
+  .docs-section {
+    padding: 3rem 0 2rem;
+  }
+  .docs-section h4 {
+    font-size: 2rem;
+  }
+  .theme-toggle {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    font-size: 14px;
+  }
+  img, iframe {
+    max-width: 100%;
+  }
+  .paper {
+    padding: 14px;
+  }
+  .paper .title {
+    font-size: 1.5rem;
+  }
+  .bio-jobmarket {
+    padding: 14px 16px;
+    font-size: 1.5rem;
+  }
+  #News li {
+    padding: 10px 10px 10px 20px;
+  }
+  .vitae-card {
+    padding: 14px;
+    gap: 12px;
+  }
+  .vitae-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 13px;
+  }
+  .vitae-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+  .vitae-time {
+    margin-left: 0;
+  }
+  .video-gallery {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .video-title {
+    font-size: 1.05rem;
+  }
+  .play-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .play-btn::after {
+    border-width: 7px 0 7px 12px;
+  }
+  .pkmn-sprite {
+    width: 96px;
+    height: 96px;
+    right: 10px;
+  }
+  .ithaka-poem {
+    font-size: 1.35rem;
+    padding: 12px 14px;
+  }
+  .footer .footer-socials {
+    justify-content: center;
+  }
+  .footer .row .columns {
+    margin-bottom: 8px;
+  }
+}
+
+@media (max-width: 429px) {
+  .video-gallery {
+    grid-template-columns: 1fr;
+  }
+  .paper .button {
+    padding: 0 12px;
+  }
+}
