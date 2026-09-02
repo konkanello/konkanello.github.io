@@ -220,6 +220,9 @@ h4 {
   --accent-soft: rgba(122, 162, 247, 0.12);
   --highlight: #ff8c3b;     /* warm orange */
   --highlight-soft: rgba(255, 140, 59, 0.14);
+  --success: #86efac;
+  --success-soft: rgba(34, 197, 94, 0.12);
+  --success-border: rgba(74, 222, 128, 0.28);
   --text: #e6e9f0;
   --muted: #9aa5bb;
   --border: #212b42;
@@ -227,6 +230,7 @@ h4 {
   --bg: #070b14;
   --radius: 10px;
   --mono: 'JetBrains Mono', 'SF Mono', 'Menlo', 'Consolas', monospace;
+  --serif: 'Noto Serif', 'Iowan Old Style', 'Palatino Linotype', serif;
   --sans: 'Inter', 'Raleway', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
 
@@ -237,6 +241,9 @@ html[data-theme="light"] {
   --accent-soft: rgba(26, 42, 79, 0.08);
   --highlight: #ea580c;
   --highlight-soft: rgba(234, 88, 12, 0.10);
+  --success: #166534;
+  --success-soft: rgba(22, 101, 52, 0.08);
+  --success-border: rgba(22, 101, 52, 0.22);
   --text: #1a1a1a;
   --muted: #6b6b6b;
   --border: #e5e5e5;
@@ -259,9 +266,6 @@ html[data-theme="light"] .paper-bib {
 }
 html[data-theme="light"] #News .older-news > summary:hover {
   color: #fff;
-}
-html[data-theme="light"] .artifact-note {
-  color: #1b7a3e;
 }
 html[data-theme="light"] .nav-label {
   background: rgba(255, 255, 255, 0.85) !important;
@@ -490,11 +494,6 @@ a:hover {
   padding-left: 0;
   margin-bottom: 2.4rem;
 }
-.docs-section h4::before {
-  content: '##  ';
-  color: var(--accent);
-  font-weight: 700;
-}
 
 /* ---- Bio paragraph ---- */
 #bio p {
@@ -552,16 +551,12 @@ a:hover {
   padding: 18px 22px;
   font-size: 1.6rem;
   background: var(--highlight-soft);
-  border: 2px solid var(--highlight);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--highlight);
   border-radius: var(--radius);
   color: var(--text);
   line-height: 1.65;
-  box-shadow: 0 0 0 4px rgba(255, 140, 59, 0.10), 0 6px 24px rgba(255, 140, 59, 0.12);
-  animation: jobmarket-glow 2.6s ease-in-out infinite;
-}
-@keyframes jobmarket-glow {
-  0%, 100% { box-shadow: 0 0 0 4px rgba(255, 140, 59, 0.08), 0 6px 24px rgba(255, 140, 59, 0.10); }
-  50%      { box-shadow: 0 0 0 4px rgba(255, 140, 59, 0.22), 0 6px 30px rgba(255, 140, 59, 0.28); }
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
 .bio-jobmarket b {
   color: var(--highlight);
@@ -570,6 +565,7 @@ a:hover {
 .bio-jobmarket a {
   color: var(--accent);
   font-weight: 600;
+  overflow-wrap: anywhere;
   text-decoration: underline;
   text-decoration-thickness: 1px;
   text-underline-offset: 2px;
@@ -731,12 +727,12 @@ a:hover {
   border-color: rgba(122, 162, 247, 0.4);
   background: transparent;
 }
-.tab-nav .button.active {
+#publications ul.tab-nav li .button.active {
   color: var(--accent);
   background: var(--accent-soft);
   border-color: rgba(122, 162, 247, 0.4);
 }
-.tab-nav .button.active:hover {
+#publications ul.tab-nav li .button.active:hover {
   color: var(--accent-2);
   background: rgba(122, 162, 247, 0.18);
 }
@@ -1083,12 +1079,12 @@ a:hover {
   display: inline-block;
   font-family: var(--mono);
   font-size: 0.7em;
-  color: var(--muted);
-  opacity: 0;
+  color: var(--accent);
+  opacity: 0.8;
   text-decoration: none;
   border: none;
   transition: opacity 0.2s ease, color 0.2s ease;
-  margin-right: 6px;
+  margin-right: 8px;
   vertical-align: middle;
 }
 .anchor-link:hover {
@@ -1163,17 +1159,28 @@ a:hover {
 }
 
 /* Artifact evaluation note */
-.artifact-note {
-  color: #4ade80;
+.paper p.artifact-note {
+  display: flex;
+  align-items: flex-start;
+  width: fit-content;
+  max-width: 100%;
+  box-sizing: border-box;
+  color: var(--success);
+  background: var(--success-soft);
+  border: 1px solid var(--success-border);
+  border-radius: 4px;
+  padding: 6px 10px;
   font-size: 0.92em;
-  font-style: italic;
-  margin: 0 0 4px;
+  font-style: normal;
+  line-height: 1.5;
+  margin: 8px 0 6px;
 }
 .artifact-note::before {
   content: "\f058"; /* check-circle */
+  flex-shrink: 0;
   font-family: FontAwesome;
   font-style: normal;
-  margin-right: 6px;
+  margin: 0.15em 7px 0 0;
 }
 
 /* Cursor-following highlight on paper cards */
@@ -1266,17 +1273,63 @@ a:hover {
   background: var(--highlight);
   color: #0b0f1a;
 }
+.ithaka-poems {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  align-items: start;
+  margin-top: 14px;
+}
+.ithaka-version {
+  min-width: 0;
+}
+.ithaka-language {
+  margin: 0 0 8px;
+  color: var(--highlight);
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ithaka-language span {
+  margin-left: 0.4rem;
+  color: var(--muted);
+  font-weight: 400;
+}
+.ithaka-version-english .ithaka-language {
+  color: var(--accent);
+}
 .ithaka-poem {
-  margin: 14px 0 0;
+  margin: 0;
   padding: 16px 20px;
   border-left: 3px solid var(--highlight);
   border-radius: 4px;
   background: var(--card-bg);
   white-space: pre-line;
-  font-style: italic;
+  font-family: var(--serif);
+  font-style: normal;
   font-size: 1.45rem;
   line-height: 1.75;
   color: var(--muted);
+}
+.ithaka-version-english .ithaka-poem {
+  border-left-color: var(--accent);
+}
+.ithaka-credit {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 1000px) {
+  .ithaka-poems {
+    position: relative;
+    left: 50%;
+    width: min(1100px, calc(100vw - 64px));
+    transform: translateX(-50%);
+  }
 }
 
 /* ---- Pokemon easter egg ---- */
@@ -1464,6 +1517,10 @@ a:hover {
   .ithaka-poem {
     font-size: 1.35rem;
     padding: 12px 14px;
+  }
+  .ithaka-poems {
+    grid-template-columns: 1fr;
+    gap: 18px;
   }
   .footer .footer-socials {
     justify-content: center;
