@@ -431,7 +431,8 @@ a:hover {
   width: 17px;
   height: 17px;
 }
-.main-description .hero-socials a.dblp-pill {
+.main-description .hero-socials a.dblp-pill,
+.main-description .hero-socials a.cv-link {
   width: auto;
   padding: 0 14px;
   border-radius: 19px;
