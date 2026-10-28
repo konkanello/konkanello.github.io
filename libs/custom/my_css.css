@@ -434,11 +434,17 @@ a:hover {
 .main-description .hero-socials a.dblp-pill,
 .main-description .hero-socials a.cv-link {
   width: auto;
+  flex: 0 0 auto;
+  white-space: nowrap;
   padding: 0 14px;
   border-radius: 19px;
   font-family: var(--mono);
   font-size: 0.95rem;
   font-weight: 600;
+}
+.main-description .hero-socials a.cv-link {
+  font-size: 13px;
+  line-height: 1;
 }
 .main-description .hero-role {
   font-size: 1.6rem;
